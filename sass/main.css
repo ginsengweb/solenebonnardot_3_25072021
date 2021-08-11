@@ -393,10 +393,10 @@ footer p i {
   text-overflow: ellipsis;
   height: 70px;
   cursor: url(hand.cur), pointer;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
 }
 
 .menu .card article {
@@ -419,29 +419,6 @@ footer p i {
   white-space: nowrap;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-}
-
 .commander {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -450,5 +427,66 @@ footer p i {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px auto 70px auto;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translate(0px, 20px);
+            transform: translate(0px, 20px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(0px 10px);
+            transform: translate(0px 10px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translate(0px, 20px);
+            transform: translate(0px, 20px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(0px 10px);
+            transform: translate(0px 10px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+.card:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.card:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.card:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.card:nth-child(4) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.card:nth-child(5) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 /*# sourceMappingURL=main.css.map */
