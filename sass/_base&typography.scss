@@ -1,0 +1,52 @@
+// BASE
+html,
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+h1 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0 20px;
+}
+h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+h4 {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-weight: 500;
+}
+h1.nomrestaurant {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 25px;
+}
+.btn {
+  @include btn;
+  @include ombre;
+  transform: scale(1);
+  transition: transform 300ms;
+  &:hover {
+    cursor: url(hand.cur), pointer;
+    transform: scale(1.15);
+  }
+}

@@ -1,0 +1,45 @@
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiary: #99e2d0;
+
+$colour-cleargrey: #f6f6f6;
+$colour-darkgrey: #eaeaea;
+
+@mixin card {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px darkgray;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin ombre {
+  box-shadow: 0px 5px 10px rgb(184, 184, 184);
+}
+@mixin btn {
+  color: white;
+  background: linear-gradient(170deg, $colour-secondary, $colour-primary);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  margin: 15px auto;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 180px;
+}
+@mixin btn-back {
+  margin: 0px -35px 3px 25px;
+  width: 20px;
+  font-size: 14px;
+}
+@mixin like {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  &:hover {
+    -webkit-text-fill-color: $colour-primary;
+    -webkit-text-stroke-width: 0px;
+  }
+}

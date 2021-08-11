@@ -1,0 +1,21 @@
+footer {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  padding: 20px 20px 30px 20px;
+  .logo_footer {
+    filter: invert(100%) contrast(200%);
+    width: 33%;
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    line-height: 1.7;
+    i {
+      margin-right: 5px;
+      width: 15px;
+    }
+  }
+}

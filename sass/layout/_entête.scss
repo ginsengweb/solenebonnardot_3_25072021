@@ -1,0 +1,20 @@
+.entête {
+  background: $colour-cleargrey;
+  text-align: center;
+  padding-bottom: 10px;
+  &__location {
+    box-shadow: inset -1px 1px 4px rgb(155, 155, 155);
+    background-color: $colour-darkgrey;
+    padding: 1px 0px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    i {
+      margin-right: 15px;
+    }
+  }
+  &__intro {
+    margin: 40px;
+  }
+}

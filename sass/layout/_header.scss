@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  align-items: center;
+  height: 63px;
+  .logo {
+    margin: auto;
+    display: flex;
+    width: 160px;
+  }
+  i {
+    @include btn-back;
+  }
+}

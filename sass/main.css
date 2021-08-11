@@ -1,0 +1,454 @@
+@charset "UTF-8";
+html,
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0 20px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-weight: 500;
+}
+
+h1.nomrestaurant {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 25px;
+}
+
+.btn {
+  color: white;
+  background: linear-gradient(170deg, #ff79da, #9356dc);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  margin: 15px auto;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 180px;
+  -webkit-box-shadow: 0px 5px 10px #b8b8b8;
+          box-shadow: 0px 5px 10px #b8b8b8;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+.btn:hover {
+  cursor: url(hand.cur), pointer;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 63px;
+}
+
+header .logo {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 160px;
+}
+
+header i {
+  margin: 0px -35px 3px 25px;
+  width: 20px;
+  font-size: 14px;
+}
+
+.entête {
+  background: #f6f6f6;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.entête__location {
+  -webkit-box-shadow: inset -1px 1px 4px #9b9b9b;
+          box-shadow: inset -1px 1px 4px #9b9b9b;
+  background-color: #eaeaea;
+  padding: 1px 0px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.entête__location i {
+  margin-right: 15px;
+}
+
+.entête__intro {
+  margin: 40px;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  margin-top: 70px;
+  padding: 60px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.restaurants h2 {
+  margin: 0 0 30px 0;
+}
+
+.card {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 10px darkgray;
+          box-shadow: 0px 0px 10px darkgray;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 250px;
+}
+
+.card .labelnouveau {
+  background-color: #99e2d0;
+  color: #008766;
+  position: absolute;
+  right: 20px;
+  margin: 13px 10px;
+  border-radius: 2px;
+}
+
+.card .labelnouveau p {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 8px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.card article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card article .etiquette {
+  width: 70%;
+  padding: 10px 0px;
+}
+
+.card article .etiquette h3 {
+  margin: 5px 10px;
+}
+
+.card article .etiquette p {
+  margin: 5px 10px;
+}
+
+.card article i {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+  padding: 0 0 10px 20px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.card article i:hover {
+  -webkit-text-fill-color: #9356dc;
+  -webkit-text-stroke-width: 0px;
+}
+
+.restaurants__cards {
+  background-color: #f6f6f6;
+}
+
+footer {
+  background-color: #303030;
+  color: white;
+  padding: 20px 20px 30px 20px;
+}
+
+footer .logo_footer {
+  -webkit-filter: invert(100%) contrast(200%);
+          filter: invert(100%) contrast(200%);
+  width: 33%;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  line-height: 1.7;
+}
+
+footer p i {
+  margin-right: 5px;
+  width: 15px;
+}
+
+.fonctionnement h2 {
+  padding: 30px 0 20px 20px;
+}
+
+.fonctionnement ul {
+  padding: 0 20px 0 40px;
+}
+
+.fonctionnement ul :hover {
+  background-color: #f5edff;
+}
+
+.fonctionnement ul :hover i {
+  color: #9356dc;
+}
+
+.fonctionnement ul li {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 20px 5px 20px -10px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 5px 10px #b8b8b8;
+          box-shadow: 0px 5px 10px #b8b8b8;
+}
+
+.fonctionnement ul li .puce {
+  margin: 0 0 0 -30px;
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.fonctionnement ul li i {
+  margin: 0 20px 0 10px;
+  color: #666666;
+  font-size: 15px;
+}
+
+.fonctionnement ul li h4 {
+  margin: 0 10px;
+}
+
+.image-accueil {
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.nommenu {
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px 30px 0 0;
+  position: absolute;
+  z-index: auto;
+  margin-top: -40px;
+  padding-top: 30px;
+}
+
+.nommenu i {
+  font-size: 24px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  margin: 15px 15px 0 0;
+  padding-top: 0px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.nommenu i:hover {
+  -webkit-text-fill-color: #9356dc;
+  -webkit-text-stroke-width: 0px;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 60px 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.menu h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: 3px solid #99e2d0;
+  width: 40px;
+  padding-bottom: 5px;
+}
+
+.menu .card {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 10px darkgray;
+          box-shadow: 0px 0px 10px darkgray;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 70px;
+  cursor: url(hand.cur), pointer;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu .card article {
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+.menu .card article p {
+  height: 22px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu .card article h3 {
+  height: 22px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+.commander {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto 70px auto;
+}
+/*# sourceMappingURL=main.css.map */
