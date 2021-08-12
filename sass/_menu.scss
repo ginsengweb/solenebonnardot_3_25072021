@@ -64,13 +64,6 @@
   }
 }
 
-.commander {
-  display: flex;
-  align-items: center;
-  // align-content: center;
-  margin: 20px auto 70px auto;
-}
-
 @keyframes fadeIn {
   0% {
     transform: translate(0px, 20px);
@@ -99,4 +92,11 @@
 }
 .card:nth-child(5) {
   animation-delay: 4s;
+}
+
+.commander {
+  display: flex;
+  align-items: center;
+  // align-content: center;
+  margin: 20px auto 70px auto;
 }
