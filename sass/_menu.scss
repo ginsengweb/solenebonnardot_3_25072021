@@ -103,40 +103,40 @@
   }
 }
 .card:nth-child(1) {
-  animation: fadeIn 1000ms 0s;
+  animation: fadeIn 1000ms 200s;
 }
 .card:nth-child(2) {
-  animation: fadeIn 1000ms 100ms;
-}
-.card:nth-child(3) {
-  animation: fadeIn 1000ms 200ms;
-}
-.card:nth-child(4) {
   animation: fadeIn 1000ms 300ms;
 }
-.card:nth-child(5) {
+.card:nth-child(3) {
   animation: fadeIn 1000ms 400ms;
 }
-.card:nth-child(6) {
+.card:nth-child(4) {
   animation: fadeIn 1000ms 500ms;
 }
-.card:nth-child(7) {
+.card:nth-child(5) {
   animation: fadeIn 1000ms 600ms;
 }
-.card:nth-child(8) {
+.card:nth-child(6) {
   animation: fadeIn 1000ms 700ms;
 }
-.card:nth-child(9) {
+.card:nth-child(7) {
   animation: fadeIn 1000ms 800ms;
 }
-.card:nth-child(10) {
+.card:nth-child(8) {
   animation: fadeIn 1000ms 900ms;
 }
-.card:nth-child(11) {
+.card:nth-child(9) {
   animation: fadeIn 1000ms 1000ms;
 }
-.card:nth-child(12) {
+.card:nth-child(10) {
   animation: fadeIn 1000ms 1100ms;
+}
+.card:nth-child(11) {
+  animation: fadeIn 1000ms 1200ms;
+}
+.card:nth-child(12) {
+  animation: fadeIn 1000ms 1300ms;
 }
 // .card:nth-child(13) {
 //   animation: fadeIn 1000ms 1200ms;
