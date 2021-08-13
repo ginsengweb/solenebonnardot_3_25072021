@@ -77,44 +77,6 @@ h1.nomrestaurant {
           box-shadow: 0px 5px 10px #807f7f;
 }
 
-@-webkit-keyframes progress-fill {
-  0% {
-    background: white;
-  }
-  17% {
-    background: white;
-  }
-  24% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(200%, #ff79da));
-    background: linear-gradient(to bottom, #9356dc, #ff79da 200%);
-  }
-  46% {
-    background-position: 80%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
-
-@keyframes progress-fill {
-  0% {
-    background: white;
-  }
-  17% {
-    background: white;
-  }
-  24% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(200%, #ff79da));
-    background: linear-gradient(to bottom, #9356dc, #ff79da 200%);
-  }
-  46% {
-    background-position: 80%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,8 +220,6 @@ header i {
   display: flex;
   font-size: 25px;
   padding: 0 0 10px 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(200%, #ff79da));
-  background: linear-gradient(to bottom, #9356dc, #ff79da 200%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -392,8 +352,6 @@ footer p i {
   right: 15px;
   margin: 15px 15px 0 0;
   padding-top: 0px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(200%, #ff79da));
-  background: linear-gradient(to bottom, #9356dc, #ff79da 200%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -401,6 +359,25 @@ footer p i {
 .nommenu i:hover {
   -webkit-animation: progress-fill 5s;
           animation: progress-fill 5s;
+}
+
+@-webkit-keyframes progress-fill {
+  0% {
+    background: white;
+  }
+  17% {
+    background: white;
+  }
+  24% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(200%, #ff79da));
+    background: linear-gradient(to bottom, #9356dc, #ff79da 200%);
+  }
+  46% {
+    background-position: 80%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
 @keyframes progress-fill {
@@ -456,8 +433,8 @@ footer p i {
   text-overflow: ellipsis;
   height: 70px;
   cursor: url(hand.cur), pointer;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -484,8 +461,6 @@ footer p i {
 
 @-webkit-keyframes fadeIn {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
     -webkit-transform: translate(0px, 20px);
             transform: translate(0px, 20px);
     opacity: 0;
@@ -498,16 +473,12 @@ footer p i {
   100% {
     -webkit-transform: translate(0px);
             transform: translate(0px);
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
     -webkit-transform: translate(0px, 20px);
             transform: translate(0px, 20px);
     opacity: 0;
@@ -520,8 +491,6 @@ footer p i {
   100% {
     -webkit-transform: translate(0px);
             transform: translate(0px);
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
     opacity: 1;
   }
 }

@@ -66,7 +66,7 @@
     @include card;
     height: 70px;
     cursor: url(hand.cur), pointer;
-    transform: scaleX(1)
+    transform: scaleX(1);
     animation-fill-mode: both;
     article {
       align-items: initial;
