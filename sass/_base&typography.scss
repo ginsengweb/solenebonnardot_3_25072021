@@ -44,7 +44,7 @@ h1.nomrestaurant {
   @include btn;
   @include ombre;
   transform: scale(1);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s, opacity 0.2s 0.1s, box-shadow 0.3s;
   &:hover {
     cursor: url(hand.cur), pointer;
     transform: scale(1.1);
