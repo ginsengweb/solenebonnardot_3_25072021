@@ -82,6 +82,9 @@
         overflow: hidden;
         white-space: nowrap;
       }
+      i {
+        @include check;
+      }
     }
   }
 }
@@ -150,4 +153,58 @@
   align-items: center;
   // align-content: center;
   margin: 20px auto 70px auto;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .nommenu {
+    margin-top: -40px;
+    padding: 30px 50px 30px 50px;
+  }
+  .menu {
+    background-color: $colour-cleargrey;
+    padding: 60px 0 0 0;
+    align-items: center;
+    h2 {
+      text-align: center;
+      width: 80px;
+      margin: 30px auto;
+    }
+    .card {
+      width: 70%;
+    }
+  }
+  .commander {
+    transform: scale(1.2);
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .nommenu {
+    padding: 30px 50px 30px 50px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 30px 30px 30px;
+    > div {
+      width: 25%;
+      align-content: center;
+      align-items: center;
+      h2 {
+        margin: 30px auto;
+        width: 30px;
+      }
+    }
+    .card {
+      width: 100%;
+    }
+  }
+  .commander {
+    transform: scale(1.2);
+    margin-top: 40px;
+    width: 100%;
+  }
 }

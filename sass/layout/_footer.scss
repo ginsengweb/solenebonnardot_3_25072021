@@ -2,11 +2,14 @@ footer {
   background-color: rgb(48, 48, 48);
   color: white;
   padding: 20px 20px 30px 20px;
-  margin: 0 -20px;
+  width: 100%;
   .logo_footer {
     filter: invert(100%) contrast(200%);
     width: 33%;
     margin-bottom: 10px;
+    @media screen and (min-width: 500px) and (max-width: 1000px) {
+      width: 20%;
+    }
   }
   p {
     margin: 0;

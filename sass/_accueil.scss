@@ -41,3 +41,14 @@
     }
   }
 }
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .fonctionnement {
+    h2 {
+      padding-left: 80px;
+    }
+    ul {
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+  }
+}
