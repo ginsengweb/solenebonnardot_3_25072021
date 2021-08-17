@@ -70,6 +70,10 @@
     animation-fill-mode: both;
     article {
       align-items: initial;
+      .etiquette {
+        height: 50px;
+        width: 75%;
+      }
       p {
         height: 22px;
         text-overflow: ellipsis;
@@ -164,13 +168,16 @@
     background-color: $colour-cleargrey;
     padding: 60px 0 0 0;
     align-items: center;
+    > div {
+      width: 60%;
+    }
     h2 {
       text-align: center;
       width: 80px;
       margin: 30px auto;
     }
     .card {
-      width: 70%;
+      width: 100%;
     }
   }
   .commander {
@@ -190,11 +197,11 @@
     justify-content: space-around;
     padding: 60px 30px 30px 30px;
     > div {
-      width: 25%;
+      width: 30%;
       align-content: center;
       align-items: center;
       h2 {
-        margin: 30px auto;
+        margin: 30px 20px;
         width: 30px;
       }
     }

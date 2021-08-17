@@ -2,12 +2,22 @@ header {
   display: flex;
   align-items: center;
   height: 63px;
+  @media screen and (min-width: 1001px) {
+    height: 90px;
+  }
   .logo {
     margin: auto;
     display: flex;
     width: 160px;
+    @media screen and (min-width: 1001px) {
+      transform: scale(1.5);
+    }
   }
   i {
     @include btn-back;
+    @media screen and (min-width: 1001px) {
+      transform: scale(1.4);
+      margin-left: 60px;
+    }
   }
 }
