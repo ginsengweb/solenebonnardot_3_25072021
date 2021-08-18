@@ -32,16 +32,15 @@ $colour-darkgrey: #eaeaea;
   width: 20px;
   font-size: 14px;
 }
+
 @mixin like {
-  background: blue;
+  background: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  &:hover {
-    animation: progress-fill 5s;
-  }
 }
+
 @mixin check {
   color: red;
 }
