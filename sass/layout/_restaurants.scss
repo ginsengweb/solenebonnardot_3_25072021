@@ -23,6 +23,7 @@
 .card {
   @include card;
   height: 250px;
+  position: relative;
   .labelnouveau {
     background-color: $colour-tertiary;
     color: #008766;

@@ -141,6 +141,28 @@ h1.nomrestaurant {
   }
 }
 
+@-webkit-keyframes checkanimation {
+  0% {
+    -webkit-transform: translateX(100%) rotate(0turn);
+            transform: translateX(100%) rotate(0turn);
+  }
+  100% {
+    -webkit-transform: translateX(0%) rotate(4turn);
+            transform: translateX(0%) rotate(4turn);
+  }
+}
+
+@keyframes checkanimation {
+  0% {
+    -webkit-transform: translateX(100%) rotate(0turn);
+            transform: translateX(100%) rotate(0turn);
+  }
+  100% {
+    -webkit-transform: translateX(0%) rotate(4turn);
+            transform: translateX(0%) rotate(4turn);
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,6 +293,7 @@ header i {
   overflow: hidden;
   text-overflow: ellipsis;
   height: 250px;
+  position: relative;
 }
 
 .card .labelnouveau {
@@ -585,8 +608,6 @@ footer .footerelements i {
   text-overflow: ellipsis;
   height: 70px;
   cursor: url(hand.cur), pointer;
-  -webkit-animation: fadeIn 1000ms both;
-          animation: fadeIn 1000ms both;
 }
 
 .menu .card article {
@@ -598,47 +619,102 @@ footer .footerelements i {
 .menu .card article .etiquette {
   height: 50px;
   width: 75%;
+  -webkit-transition: width 500ms ease-in;
+  transition: width 500ms ease-in;
 }
 
-.menu .card article p {
+.menu .card article .etiquette:hover {
+  width: 64%;
+}
+
+.menu .card article .etiquette:hover + .selectplate {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.menu .card article .etiquette:hover + .selectplate .fa-check-circle {
+  -webkit-animation: checkanimation 500ms;
+          animation: checkanimation 500ms;
+}
+
+.menu .card article .etiquette:hover + .selectplate .prix {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.menu .card article .etiquette p {
   height: 22px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.menu .card article h3 {
+.menu .card article .etiquette h3 {
   height: 22px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.menu .card article .fa-check-circle {
-  color: red;
+.menu .card article .selectplate {
+  background-color: #99e2d0;
+  width: 20%;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
-.card:nth-child(1) {
+.menu .card article .selectplate .prix {
+  margin: 35px 40px 10px -70px;
+  font-weight: 600;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.menu .card article .selectplate .fa-check-circle {
+  color: white;
+  font-size: 26px;
+  margin: 20px;
+}
+
+.menu .card:nth-child(1) {
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
 }
 
-.card:nth-child(2) {
+.menu .card:nth-child(2) {
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
 }
 
-.card:nth-child(3) {
+.menu .card:nth-child(3) {
   -webkit-animation-delay: 400ms;
           animation-delay: 400ms;
 }
 
-.card:nth-child(4) {
+.menu .card:nth-child(4) {
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
 }
 
-.commander {
+.menu .commander {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,29 +725,29 @@ footer .footerelements i {
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
-  .nommenu {
+  .menu .nommenu {
     margin-top: -40px;
     padding: 30px 50px 30px 50px;
   }
-  .menu {
+  .menu .menu {
     background-color: #f6f6f6;
     padding: 60px 0 0 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .menu > div {
+  .menu .menu > div {
     width: 60%;
   }
-  .menu h2 {
+  .menu .menu h2 {
     text-align: center;
     width: 80px;
     margin: 30px auto;
   }
-  .menu .card {
+  .menu .menu .card {
     width: 100%;
   }
-  .commander {
+  .menu .commander {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
     margin-top: 40px;
@@ -679,10 +755,10 @@ footer .footerelements i {
 }
 
 @media screen and (min-width: 1001px) {
-  .nommenu {
+  .menu .nommenu {
     padding: 30px 0 30px 50px;
   }
-  .menu {
+  .menu .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -696,7 +772,7 @@ footer .footerelements i {
         justify-content: space-around;
     padding: 60px 30px 30px 30px;
   }
-  .menu > div {
+  .menu .menu > div {
     width: 30%;
     -ms-flex-line-pack: center;
         align-content: center;
@@ -704,14 +780,14 @@ footer .footerelements i {
         -ms-flex-align: center;
             align-items: center;
   }
-  .menu > div h2 {
+  .menu .menu > div h2 {
     margin: 30px 20px;
     width: 30px;
   }
-  .menu .card {
+  .menu .menu .card {
     width: 100%;
   }
-  .commander {
+  .menu .commander {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
     margin-top: 40px;

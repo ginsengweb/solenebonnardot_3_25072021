@@ -48,104 +48,133 @@
     @include card;
     height: 70px;
     cursor: url(hand.cur), pointer;
-    animation: fadeIn 1000ms both;
+
     article {
       align-items: initial;
       .etiquette {
         height: 50px;
         width: 75%;
+        transition: width 500ms ease-in;
+        &:hover {
+          width: 64%;
+        }
+        &:hover + .selectplate {
+          transform: translateX(0px);
+        }
+        &:hover + .selectplate .fa-check-circle {
+          animation: checkanimation 500ms;
+        }
+        &:hover + .selectplate .prix {
+          transform: translateX(100%);
+        }
+        p {
+          height: 22px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        h3 {
+          height: 22px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
       }
-      p {
-        height: 22px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-      h3 {
-        height: 22px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-      .fa-check-circle {
-        @include check;
+      .selectplate {
+        background-color: $colour-tertiary;
+        width: 20%;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+        .prix {
+          margin: 35px 40px 10px -70px;
+          font-weight: 600;
+          transform: translateX(0%);
+          transition: transform 500ms;
+        }
+        .fa-check-circle {
+          @include check;
+        }
       }
     }
   }
-}
-.card:nth-child(1) {
-  animation-delay: 200ms;
-}
-.card:nth-child(2) {
-  animation-delay: 300ms;
-}
-.card:nth-child(3) {
-  animation-delay: 400ms;
-}
-.card:nth-child(4) {
-  animation-delay: 500ms;
-}
+  .card:nth-child(1) {
+    animation-delay: 200ms;
+  }
+  .card:nth-child(2) {
+    animation-delay: 300ms;
+  }
+  .card:nth-child(3) {
+    animation-delay: 400ms;
+  }
+  .card:nth-child(4) {
+    animation-delay: 500ms;
+  }
 
-.commander {
-  display: flex;
-  align-items: center;
-  // align-content: center;
-  margin: 20px auto 70px auto;
-}
-
-@media screen and (min-width: 500px) and (max-width: 1000px) {
-  .nommenu {
-    margin-top: -40px;
-    padding: 30px 50px 30px 50px;
-  }
-  .menu {
-    background-color: $colour-cleargrey;
-    padding: 60px 0 0 0;
-    align-items: center;
-    > div {
-      width: 60%;
-    }
-    h2 {
-      text-align: center;
-      width: 80px;
-      margin: 30px auto;
-    }
-    .card {
-      width: 100%;
-    }
-  }
   .commander {
-    transform: scale(1.2);
-    margin-top: 40px;
-  }
-}
-
-@media screen and (min-width: 1001px) {
-  .nommenu {
-    padding: 30px 0 30px 50px;
-  }
-  .menu {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 60px 30px 30px 30px;
-    > div {
-      width: 30%;
-      align-content: center;
+    align-items: center;
+    // align-content: center;
+    margin: 20px auto 70px auto;
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 1000px) {
+    .nommenu {
+      margin-top: -40px;
+      padding: 30px 50px 30px 50px;
+    }
+    .menu {
+      background-color: $colour-cleargrey;
+      padding: 60px 0 0 0;
       align-items: center;
+      > div {
+        width: 60%;
+      }
       h2 {
-        margin: 30px 20px;
-        width: 30px;
+        text-align: center;
+        width: 80px;
+        margin: 30px auto;
+      }
+      .card {
+        width: 100%;
       }
     }
-    .card {
-      width: 100%;
+    .commander {
+      transform: scale(1.2);
+      margin-top: 40px;
     }
   }
-  .commander {
-    transform: scale(1.2);
-    margin-top: 40px;
-    width: 100%;
+
+  @media screen and (min-width: 1001px) {
+    .nommenu {
+      padding: 30px 0 30px 50px;
+    }
+    .menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 60px 30px 30px 30px;
+      > div {
+        width: 30%;
+        align-content: center;
+        align-items: center;
+        h2 {
+          margin: 30px 20px;
+          width: 30px;
+        }
+      }
+      .card {
+        width: 100%;
+      }
+    }
+    .commander {
+      transform: scale(1.2);
+      margin-top: 40px;
+      width: 100%;
+    }
   }
 }

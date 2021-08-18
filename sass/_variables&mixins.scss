@@ -42,5 +42,8 @@ $colour-darkgrey: #eaeaea;
 }
 
 @mixin check {
-  color: red;
+  color: white;
+  font-size: 26px;
+  margin: 20px;
 }
+
