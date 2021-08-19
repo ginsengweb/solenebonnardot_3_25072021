@@ -24,8 +24,8 @@
     margin: 15px 15px 0 0;
     padding-top: 0px;
     @include like;
-    :hover {
-      animation: progress-fill 400ms;
+    &:hover {
+      animation: progress-fill 800ms ease-out both;
     }
   }
 }
@@ -59,7 +59,7 @@
           width: 64%;
         }
         &:hover + .selectplate {
-          transform: translateX(0px);
+          transform: translateX(1%);
         }
         &:hover + .selectplate .fa-check-circle {
           animation: checkanimation 500ms;
@@ -117,7 +117,7 @@
   .commander {
     display: flex;
     align-items: center;
-    // align-content: center;
+    justify-content: center;
     margin: 20px auto 70px auto;
   }
 
@@ -129,7 +129,6 @@
     .menu {
       background-color: $colour-cleargrey;
       padding: 60px 0 0 0;
-      align-items: center;
       > div {
         width: 60%;
       }

@@ -23,7 +23,6 @@
 .card {
   @include card;
   height: 250px;
-  position: relative;
   .labelnouveau {
     background-color: $colour-tertiary;
     color: #008766;
@@ -66,7 +65,7 @@
       padding: 0 0 10px 20px;
       @include like;
       &:hover {
-        animation: progress-fill 5s;
+        animation: progress-fill 800ms ease-out both;
       }
     }
   }

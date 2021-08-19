@@ -11,18 +11,18 @@
 
 @keyframes progress-fill {
   0% {
-    background: linear-gradient(90deg, $colour-primary, $colour-secondary, 50%);
+    background: $colour-gradient;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
   }
   100% {
-    background: linear-gradient($colour-primary, $colour-secondary);
+    background: $colour-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: transparent;
   }
 }
 
