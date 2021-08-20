@@ -1,3 +1,4 @@
+// ANIMATION CARTES
 @keyframes fadeIn {
   0% {
     transform: translateY(20px);
@@ -9,6 +10,35 @@
   }
 }
 
+// ANIMATION LOADING SPINNER
+@keyframes fadeOut {
+  0% {
+    transform: scaleX(100%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scaleX(100%);
+  }
+  100% {
+    transform: scaleX(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes loading-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// ANIMATION LIKE
 @keyframes progress-fill {
   0% {
     background: $colour-gradient;
@@ -26,8 +56,7 @@
   }
 }
 
-// background: linear-gradient(160deg, red, red 60%, white 60%, white);
-
+// ANIMATION CHECK
 @keyframes checkanimation {
   0% {
     transform: translateX(100%) rotate(0turn);

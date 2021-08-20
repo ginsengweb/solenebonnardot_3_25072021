@@ -1,3 +1,5 @@
+// IMAGE ET TITRE
+
 .image-accueil {
   width: 100%;
   height: 260px;
@@ -6,7 +8,7 @@
 .nommenu {
   background-color: $colour-cleargrey;
   width: 100%;
-  height: 50px;
+  height: 30px;
   display: flex;
   flex-direction: row;
   align-content: space-between;
@@ -19,10 +21,8 @@
   .fa-heart {
     font-size: 24px;
     position: absolute;
-    bottom: 15px;
-    right: 15px;
-    margin: 15px 15px 0 0;
-    padding-top: 0px;
+    bottom: 10px;
+    right: 35px;
     @include like;
     &:hover {
       animation: progress-fill 800ms ease-out both;
@@ -46,6 +46,8 @@
   }
   .card {
     @include card;
+    opacity: 0;
+    animation: fadeIn 1000ms both;
     height: 70px;
     cursor: url(hand.cur), pointer;
 
@@ -72,6 +74,7 @@
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
+          line-height: 10px;
         }
         h3 {
           height: 22px;
@@ -120,60 +123,73 @@
     justify-content: center;
     margin: 20px auto 70px auto;
   }
+}
 
-  @media screen and (min-width: 500px) and (max-width: 1000px) {
-    .nommenu {
-      margin-top: -40px;
-      padding: 30px 50px 30px 50px;
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .nommenu {
+    margin-top: -40px;
+    h1 {
+      margin-left: 60px;
     }
-    .menu {
-      background-color: $colour-cleargrey;
-      padding: 60px 0 0 0;
-      > div {
-        width: 60%;
-      }
-      h2 {
-        text-align: center;
-        width: 80px;
-        margin: 30px auto;
-      }
-      .card {
-        width: 100%;
-      }
-    }
-    .commander {
-      transform: scale(1.2);
-      margin-top: 40px;
+    i {
+      padding-right: 40px;
     }
   }
-
-  @media screen and (min-width: 1001px) {
-    .nommenu {
-      padding: 30px 0 30px 50px;
+  .menu {
+    background-color: $colour-cleargrey;
+    padding: 60px 0 0 0;
+    align-items: center;
+    > div {
+      width: 60%;
     }
-    .menu {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 60px 30px 30px 30px;
-      > div {
-        width: 30%;
-        align-content: center;
-        align-items: center;
-        h2 {
-          margin: 30px 20px;
-          width: 30px;
-        }
-      }
-      .card {
-        width: 100%;
-      }
+    h2 {
+      text-align: center;
+      width: 80px;
+      margin: 30px auto;
     }
-    .commander {
-      transform: scale(1.2);
-      margin-top: 40px;
+    .card {
       width: 100%;
     }
+  }
+  .commander {
+    transform: scale(1.2);
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .nommenu {
+    padding-left: 40px;
+    align-items: unset;
+    justify-content: center;
+    h1 {
+      margin-right: 60px;
+    }
+    .fa-heart {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 30px 30px 30px;
+    > div {
+      width: 30%;
+      h2 {
+        margin: 30px 10px;
+        width: 30px;
+      }
+    }
+    .card {
+      width: 100%;
+    }
+  }
+  .commander {
+    transform: scale(1.2);
+    margin-top: 40px;
+    width: 100%;
   }
 }

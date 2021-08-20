@@ -1,11 +1,12 @@
 @import "./_variables&mixins";
 @import "./_base&typography.scss";
-@import "./_animation.scss";
+@import "./_keyframes.scss";
 
 @import "./layout/header";
 @import "./layout/entête";
 @import "./layout/restaurants";
 @import "./layout/footer";
 
-@import "./accueil";
-@import "./menu";
+@import "./_accueil";
+@import "./_menu";
+@import "./loadingspinner";

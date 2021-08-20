@@ -4,6 +4,8 @@ body {
   margin: 0;
 }
 
+// TYPOGRPHIE
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -40,6 +42,8 @@ h1.nomrestaurant {
   font-family: "Shrikhand", sans-serif;
   font-size: 25px;
 }
+
+// CLASSES GLOBALES
 .btn {
   @include btn;
   @include ombre;

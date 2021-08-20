@@ -103,6 +103,72 @@ h1.nomrestaurant {
   }
 }
 
+@-webkit-keyframes fadeOut {
+  0% {
+    -webkit-transform: scaleX(100%);
+            transform: scaleX(100%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scaleX(100%);
+            transform: scaleX(100%);
+  }
+  100% {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    -webkit-transform: scaleX(100%);
+            transform: scaleX(100%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scaleX(100%);
+            transform: scaleX(100%);
+  }
+  100% {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loading-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes loading-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 @-webkit-keyframes progress-fill {
   0% {
     background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
@@ -258,6 +324,7 @@ header i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
 }
 
 .restaurants h2 {
@@ -357,7 +424,7 @@ header i {
   background: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1.1px;
   -webkit-text-stroke-color: black;
 }
 
@@ -397,7 +464,6 @@ footer .logo_footer {
   -webkit-filter: invert(100%) contrast(200%);
           filter: invert(100%) contrast(200%);
   width: 33%;
-  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 500px) {
@@ -412,6 +478,18 @@ footer .logo_footer {
   }
 }
 
+footer .footerelements p {
+  margin-right: 80px;
+  font-size: 0.9rem;
+  line-height: 5px;
+}
+
+footer .footerelements i {
+  width: 18px;
+  font-size: 11px;
+  line-height: 5px;
+}
+
 @media screen and (min-width: 1001px) {
   footer .footerelements {
     display: -webkit-box;
@@ -419,15 +497,6 @@ footer .logo_footer {
     display: flex;
     margin: 10px 60px;
   }
-}
-
-footer .footerelements p {
-  margin-right: 80px;
-  font-size: 0.9rem;
-}
-
-footer .footerelements i {
-  margin-right: 10px;
 }
 
 .fonctionnement h2 {
@@ -543,7 +612,7 @@ footer .footerelements i {
 .nommenu {
   background-color: #f6f6f6;
   width: 100%;
-  height: 50px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,14 +635,12 @@ footer .footerelements i {
 .nommenu .fa-heart {
   font-size: 24px;
   position: absolute;
-  bottom: 15px;
-  right: 15px;
-  margin: 15px 15px 0 0;
-  padding-top: 0px;
+  bottom: 10px;
+  right: 35px;
   background: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1.1px;
   -webkit-text-stroke-color: black;
 }
 
@@ -613,6 +680,9 @@ footer .footerelements i {
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
+  opacity: 0;
+  -webkit-animation: fadeIn 1000ms both;
+          animation: fadeIn 1000ms both;
   height: 70px;
   cursor: url(hand.cur), pointer;
 }
@@ -654,6 +724,7 @@ footer .footerelements i {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  line-height: 10px;
 }
 
 .menu .card article .etiquette h3 {
@@ -735,26 +806,34 @@ footer .footerelements i {
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
-  .menu .nommenu {
+  .nommenu {
     margin-top: -40px;
-    padding: 30px 50px 30px 50px;
   }
-  .menu .menu {
+  .nommenu h1 {
+    margin-left: 60px;
+  }
+  .nommenu i {
+    padding-right: 40px;
+  }
+  .menu {
     background-color: #f6f6f6;
     padding: 60px 0 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .menu .menu > div {
+  .menu > div {
     width: 60%;
   }
-  .menu .menu h2 {
+  .menu h2 {
     text-align: center;
     width: 80px;
     margin: 30px auto;
   }
-  .menu .menu .card {
+  .menu .card {
     width: 100%;
   }
-  .menu .commander {
+  .commander {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
     margin-top: 40px;
@@ -762,13 +841,28 @@ footer .footerelements i {
 }
 
 @media screen and (min-width: 1001px) {
-  .menu .nommenu {
-    padding: 30px 0 30px 50px;
+  .nommenu {
+    padding-left: 40px;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .menu .menu {
+  .nommenu h1 {
+    margin-right: 60px;
+  }
+  .nommenu .fa-heart {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -779,26 +873,50 @@ footer .footerelements i {
         justify-content: space-around;
     padding: 60px 30px 30px 30px;
   }
-  .menu .menu > div {
+  .menu > div {
     width: 30%;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-  .menu .menu > div h2 {
-    margin: 30px 20px;
+  .menu > div h2 {
+    margin: 30px 10px;
     width: 30px;
   }
-  .menu .menu .card {
+  .menu .card {
     width: 100%;
   }
-  .menu .commander {
+  .commander {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
     margin-top: 40px;
     width: 100%;
   }
+}
+
+.spinnerbox {
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 1200px;
+  margin-top: 130px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  -webkit-animation: fadeOut 1s 3s forwards;
+          animation: fadeOut 1s 3s forwards;
+}
+
+.spinner {
+  margin-top: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top: 10px solid #99e2d0;
+  opacity: 1;
+  -webkit-animation: loading-spinner 2s ease-in-out infinite;
+          animation: loading-spinner 2s ease-in-out infinite;
 }
 /*# sourceMappingURL=main.css.map */
