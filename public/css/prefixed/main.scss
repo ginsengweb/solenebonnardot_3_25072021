@@ -1,0 +1,14 @@
+@import "./_variables&mixins";
+@import "./_base&typography.scss";
+@import "./_keyframes.scss";
+
+@import "./layout/header";
+@import "./layout/entête";
+@import "./layout/restaurants";
+@import "./layout/footer";
+
+@import "./_accueil";
+@import "./_menu";
+@import "./loadingspinner";
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvbWFpbi5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDZCQUE2QjtBQUM3QixpQ0FBaUM7QUFDakMsMkJBQTJCOztBQUUzQix5QkFBeUI7QUFDekIseUJBQXlCO0FBQ3pCLDhCQUE4QjtBQUM5Qix5QkFBeUI7O0FBRXpCLG9CQUFvQjtBQUNwQixpQkFBaUI7QUFDakIsMEJBQTBCIiwiZmlsZSI6Im1haW4uc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCIuL192YXJpYWJsZXMmbWl4aW5zXCI7XG5AaW1wb3J0IFwiLi9fYmFzZSZ0eXBvZ3JhcGh5LnNjc3NcIjtcbkBpbXBvcnQgXCIuL19rZXlmcmFtZXMuc2Nzc1wiO1xuXG5AaW1wb3J0IFwiLi9sYXlvdXQvaGVhZGVyXCI7XG5AaW1wb3J0IFwiLi9sYXlvdXQvZW50w6p0ZVwiO1xuQGltcG9ydCBcIi4vbGF5b3V0L3Jlc3RhdXJhbnRzXCI7XG5AaW1wb3J0IFwiLi9sYXlvdXQvZm9vdGVyXCI7XG5cbkBpbXBvcnQgXCIuL19hY2N1ZWlsXCI7XG5AaW1wb3J0IFwiLi9fbWVudVwiO1xuQGltcG9ydCBcIi4vbG9hZGluZ3NwaW5uZXJcIjtcbiJdfQ== */

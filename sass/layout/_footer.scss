@@ -16,12 +16,13 @@ footer {
     }
   }
   .footerelements {
-    p {
+    .footerlink {
       margin-right: 80px;
       font-size: 0.9rem;
       line-height: 5px;
+      color: white;
     }
-    i {
+    .footerlink i {
       width: 18px;
       font-size: 11px;
       line-height: 5px;
