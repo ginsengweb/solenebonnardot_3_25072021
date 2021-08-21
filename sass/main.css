@@ -69,7 +69,7 @@ h1.nomrestaurant {
   transition: transform 0.3s, opacity 0.2s 0.1s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
 }
 
-.btn:hover, .btn:active {
+.btn:hover, .btn:active, .btn:focus {
   cursor: url(hand.cur), pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
