@@ -106,36 +106,36 @@ h1.nomrestaurant {
 
 @-webkit-keyframes fadeOut {
   0% {
-    -webkit-transform: scaleX(100%);
-            transform: scaleX(100%);
+    -webkit-transform: scaleY(100%);
+            transform: scaleY(100%);
     opacity: 1;
   }
   50% {
     opacity: 0;
-    -webkit-transform: scaleX(100%);
-            transform: scaleX(100%);
+    -webkit-transform: scaleY(100%);
+            transform: scaleY(100%);
   }
   100% {
-    -webkit-transform: scaleX(0%);
-            transform: scaleX(0%);
+    -webkit-transform: scaleY(0%);
+            transform: scaleY(0%);
     opacity: 0;
   }
 }
 
 @keyframes fadeOut {
   0% {
-    -webkit-transform: scaleX(100%);
-            transform: scaleX(100%);
+    -webkit-transform: scaleY(100%);
+            transform: scaleY(100%);
     opacity: 1;
   }
   50% {
     opacity: 0;
-    -webkit-transform: scaleX(100%);
-            transform: scaleX(100%);
+    -webkit-transform: scaleY(100%);
+            transform: scaleY(100%);
   }
   100% {
-    -webkit-transform: scaleX(0%);
-            transform: scaleX(0%);
+    -webkit-transform: scaleY(0%);
+            transform: scaleY(0%);
     opacity: 0;
   }
 }

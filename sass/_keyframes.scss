@@ -13,15 +13,15 @@
 // ANIMATION LOADING SPINNER
 @keyframes fadeOut {
   0% {
-    transform: scaleX(100%);
+    transform: scaleY(100%);
     opacity: 1;
   }
   50% {
     opacity: 0;
-    transform: scaleX(100%);
+    transform: scaleY(100%);
   }
   100% {
-    transform: scaleX(0%);
+    transform: scaleY(0%);
     opacity: 0;
   }
 }
