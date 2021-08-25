@@ -762,7 +762,7 @@ footer .footerelements .footerlink i {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  line-height: 10px;
+  line-height: 13px;
 }
 
 .menu .card article .etiquette h3 {
@@ -794,7 +794,7 @@ footer .footerelements .footerlink i {
 }
 
 .menu .card article .selectplate .prix {
-  margin: 35px 40px 10px -70px;
+  margin: 35px 50px 10px -70px;
   font-weight: 600;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
