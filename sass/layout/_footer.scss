@@ -2,8 +2,9 @@ footer {
   background-color: rgb(48, 48, 48);
   color: white;
   padding: 20px 20px 30px 20px;
+
   @media screen and (min-width: 500px) {
-    padding: 40px 60px;
+    padding: 40px 50px;
   }
   .logo_footer {
     filter: invert(100%) contrast(200%);
@@ -16,11 +17,23 @@ footer {
     }
   }
   .footerelements {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 500px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
     .footerlink {
-      margin-right: 80px;
+      width: 100%;
+      margin-top: 10px;
       font-size: 0.9rem;
-      line-height: 5px;
       color: white;
+      @media screen and (min-width: 500px) and (max-width: 1000px) {
+        width: 50%;
+      }
+      @media screen and (min-width: 1001px) {
+        width: 20%;
+      }
     }
     .footerlink i {
       width: 18px;

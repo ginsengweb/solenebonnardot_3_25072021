@@ -25,7 +25,7 @@
     right: 35px;
     @include like;
     &:hover {
-      animation: progress-fill 3s ease-out both;
+      animation: progress-fill 1s ease-out both;
     }
   }
 }

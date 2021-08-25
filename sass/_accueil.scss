@@ -65,11 +65,11 @@
 
       li {
         display: flex;
-        transform: scale(1.1);
+        // transform: scale(1.1);
         flex-direction: row;
-        width: 20%;
+        width: 25%;
         margin: 20px auto;
-        padding: 20px;
+        padding: 15px;
         @include ombre;
         i {
           margin: 0 20px 0 10px;
