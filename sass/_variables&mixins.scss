@@ -36,12 +36,20 @@ $colour-gradient: linear-gradient($colour-primary, $colour-secondary);
   font-size: 14px;
 }
 
-@mixin like {
+@mixin emptylike {
   background: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1.1px;
   -webkit-text-stroke-color: black;
+}
+
+@mixin filledlike {
+  background: $colour-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.1px;
+  -webkit-text-stroke-color: transparent;
 }
 
 @mixin check {

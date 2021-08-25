@@ -59,14 +59,27 @@
         margin: 5px 10px;
       }
     }
-    .fa-heart {
+    .emptylike {
       width: 20%;
       display: flex;
       font-size: 25px;
       padding: 0 0 10px 20px;
-      @include like;
+      right: 0px;
+      position: absolute;
+      @include emptylike;
+    }
+    .filledlike {
+      width: 20%;
+      display: flex;
+      font-size: 25px;
+      padding: 0 0 10px 20px;
+      right: 0px;
+      position: absolute;
+      @include filledlike;
+      opacity: 0;
       &:hover {
-        animation: progress-fill 800ms ease-out both;
+        opacity: 1;
+        transition: opacity 500ms;
       }
     }
   }

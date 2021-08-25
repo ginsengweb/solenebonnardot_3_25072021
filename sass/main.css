@@ -170,44 +170,6 @@ h1.nomrestaurant {
   }
 }
 
-@-webkit-keyframes progress-fill {
-  0% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-  }
-  100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: transparent;
-  }
-}
-
-@keyframes progress-fill {
-  0% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-  }
-  100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: transparent;
-  }
-}
-
 @-webkit-keyframes checkanimation {
   0% {
     -webkit-transform: translateX(100%) rotate(0turn);
@@ -422,13 +384,15 @@ header i {
   margin: 5px 10px;
 }
 
-.card article .fa-heart {
+.card article .emptylike {
   width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 25px;
   padding: 0 0 10px 20px;
+  right: 0px;
+  position: absolute;
   background: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -436,9 +400,28 @@ header i {
   -webkit-text-stroke-color: black;
 }
 
-.card article .fa-heart:hover {
-  -webkit-animation: progress-fill 800ms ease-out both;
-          animation: progress-fill 800ms ease-out both;
+.card article .filledlike {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+  padding: 0 0 10px 20px;
+  right: 0px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.1px;
+  -webkit-text-stroke-color: transparent;
+  opacity: 0;
+}
+
+.card article .filledlike:hover {
+  opacity: 1;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
@@ -666,13 +649,13 @@ footer .footerelements .footerlink i {
       -ms-flex-align: end;
           align-items: flex-end;
   border-radius: 30px 30px 0 0;
-  position: absolute;
+  position: relative;
   z-index: auto;
   margin-top: -40px;
   padding-top: 30px;
 }
 
-.nommenu .fa-heart {
+.nommenu .emptylike {
   font-size: 24px;
   position: absolute;
   bottom: 10px;
@@ -684,9 +667,24 @@ footer .footerelements .footerlink i {
   -webkit-text-stroke-color: black;
 }
 
-.nommenu .fa-heart:hover {
-  -webkit-animation: progress-fill 1s ease-out both;
-          animation: progress-fill 1s ease-out both;
+.nommenu .filledlike {
+  font-size: 24px;
+  position: absolute;
+  bottom: 10px;
+  right: 35px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.1px;
+  -webkit-text-stroke-color: transparent;
+  opacity: 0;
+}
+
+.nommenu .filledlike:hover {
+  opacity: 1;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
 
 .menu {
@@ -890,14 +888,10 @@ footer .footerelements .footerlink i {
   .nommenu h1 {
     margin-right: 100px;
   }
-  .nommenu .fa-heart {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .nommenu .emptylike,
+  .nommenu .filledlike {
+    right: 38%;
+    bottom: 8px;
   }
   .menu {
     -webkit-box-orient: horizontal;
