@@ -66,32 +66,33 @@
         height: 50px;
         width: 75%;
         transition: width 500ms ease-in;
-        &:hover {
-          width: 64%;
-        }
-        &:hover + .selectplate {
-          transform: translateX(1%);
-        }
-        &:hover + .selectplate .fa-check-circle {
-          animation: checkanimation 500ms;
-        }
-        &:hover + .selectplate .prix {
-          transform: translateX(100%);
-        }
-        p {
-          height: 22px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-          line-height: 13px;
-        }
-        h3 {
-          height: 22px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        }
       }
+      &:hover > .etiquette {
+        width: 64%;
+      }
+      &:hover > .selectplate {
+        transform: translateX(1%);
+      }
+      &:hover > .selectplate .fa-check-circle {
+        animation: checkanimation 500ms;
+      }
+      &:hover > .selectplate .prix {
+        transform: translateX(100%);
+      }
+      p {
+        height: 22px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        line-height: 13px;
+      }
+      h3 {
+        height: 22px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
       .selectplate {
         background-color: $colour-tertiary;
         width: 20%;
@@ -106,6 +107,7 @@
           font-weight: 600;
           transform: translateX(0%);
           transition: transform 500ms;
+          overflow: initial;
         }
         .fa-check-circle {
           @include check;

@@ -192,6 +192,24 @@ h1.nomrestaurant {
   }
 }
 
+@-webkit-keyframes textplate {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes textplate {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,26 +756,26 @@ footer .footerelements .footerlink i {
   transition: width 500ms ease-in;
 }
 
-.menu .card article .etiquette:hover {
+.menu .card article:hover > .etiquette {
   width: 64%;
 }
 
-.menu .card article .etiquette:hover + .selectplate {
+.menu .card article:hover > .selectplate {
   -webkit-transform: translateX(1%);
           transform: translateX(1%);
 }
 
-.menu .card article .etiquette:hover + .selectplate .fa-check-circle {
+.menu .card article:hover > .selectplate .fa-check-circle {
   -webkit-animation: checkanimation 500ms;
           animation: checkanimation 500ms;
 }
 
-.menu .card article .etiquette:hover + .selectplate .prix {
+.menu .card article:hover > .selectplate .prix {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
 
-.menu .card article .etiquette p {
+.menu .card article p {
   height: 22px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -765,7 +783,7 @@ footer .footerelements .footerlink i {
   line-height: 13px;
 }
 
-.menu .card article .etiquette h3 {
+.menu .card article h3 {
   height: 22px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -802,6 +820,7 @@ footer .footerelements .footerlink i {
   transition: -webkit-transform 500ms;
   transition: transform 500ms;
   transition: transform 500ms, -webkit-transform 500ms;
+  overflow: initial;
 }
 
 .menu .card article .selectplate .fa-check-circle {

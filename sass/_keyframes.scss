@@ -47,3 +47,12 @@
     transform: translateX(0%) rotate(4turn);
   }
 }
+
+@keyframes textplate {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 60%;
+  }
+}
